@@ -5,7 +5,7 @@
 - localhost:8080/hello : using  @RequestMapping 
 - /helloAgain : use @GetMapping
 - /HelloWorldBean  : return a Object
-- /hello/{name} : Using Path Param
+- /hello/{name} : Using Path Variable
 ######  ###############################  ### 
 
 ###### Day-2 
