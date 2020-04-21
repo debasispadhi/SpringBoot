@@ -9,7 +9,7 @@ public class HelloWorldController{
         return "Hello World";
     }
 
-    @GetMapping (path="/hello1")
+    @GetMapping (path="/helloAgain")
     public String hello1(){
         return "Hello World Once again";
     }

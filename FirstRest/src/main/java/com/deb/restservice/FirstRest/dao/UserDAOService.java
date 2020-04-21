@@ -1,11 +1,13 @@
 package com.deb.restservice.FirstRest.dao;
 
 import com.deb.restservice.FirstRest.model.User;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 @Component
@@ -29,14 +31,12 @@ public class UserDAOService {
         users.add(user);
         return user;
     }
-    public User findUser(Integer userId){
-        Stream<User> stream = users.stream();
+    public User getUser(int userId){
         for (User user : users){
-            if(userId==user.getUserId()){
+            if(user.getUserId() == userId){
                 return user;
             }
         }
-        //return stream.filter(userStream -> userStream.getUserId() == userId).distinct().reduce();
         return null;
     }
 }
