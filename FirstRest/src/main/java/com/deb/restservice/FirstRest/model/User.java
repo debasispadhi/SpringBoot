@@ -3,7 +3,9 @@ package com.deb.restservice.FirstRest.model;
 import java.util.Date;
 
 public class User {
+
     private Integer userId;
+
     private String firstName;
     private String lastName;
     private Date dateOfBirth;

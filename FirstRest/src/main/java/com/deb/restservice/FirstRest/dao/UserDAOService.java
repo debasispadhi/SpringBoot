@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
@@ -34,6 +35,17 @@ public class UserDAOService {
     public User getUser(int userId){
         for (User user : users){
             if(user.getUserId() == userId){
+                return user;
+            }
+        }
+        return null;
+    }
+    public User deleteUserById(int userId){
+        Iterator<User> iterator= users.iterator();
+        while(iterator.hasNext()){
+            User user = iterator.next();
+            if(user.getUserId() == userId){
+                iterator.remove();
                 return user;
             }
         }
